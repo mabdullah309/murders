@@ -1,0 +1,5 @@
+library(tidyverse)
+library(dslabs)
+data("murders")
+murders<- murders%>%mutate(region=factor(region),rate=total/population*100)
+save(murders,file="Rda/murders.rda")
